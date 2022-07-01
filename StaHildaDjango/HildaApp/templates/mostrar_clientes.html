@@ -126,6 +126,7 @@
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>Edad</th>
+                    <th>Correo</th>
                     <th>Modificar Cliente</th>
                     <th>Eliminar Cliente</th>  
                 </tr>
@@ -138,6 +139,7 @@
                     <td> {{ cl.direccion }}</td>
                     <td> {{ cl.telefono }}</td>
                     <td> {{ cl.edad }}</td>
+                    <td> {{ cl.correo }}</td>
                     {% if user.is_authenticated  %}
                       <td> <a href="{% url 'form_mod_cliente' cl.rut %}" class="btn btn-primary"> Modificar</a></td>
                       <td> <a href="{% url 'form_del_cliente' cl.rut %}" class="btn btn-danger"> Eliminar</a></td>

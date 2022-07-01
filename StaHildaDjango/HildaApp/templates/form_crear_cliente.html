@@ -54,6 +54,7 @@
                         direccion: "required",
                         telefono: "required",
                         edad: "required",
+                        correo: "required",
                   }   
                   
               }, //rules
@@ -73,6 +74,9 @@
               edad:{
                   required: 'Ingrese Edad',
               },
+              correo: {
+                  required: 'Ingrese Correo'
+              }
           }//messages
       }); //$('#mi-formulario').validate
   }); //function
@@ -208,6 +212,10 @@ function MostrarFecha()
                     <label class="textlabel">{{ cliente_form.edad.label}}</label>
                     {{ cliente_form.edad}}
                 </div>
+                <div class="form-group">
+                  <label class="textlabel">{{ cliente_form.correo.label}}</label>
+                  {{ cliente_form.correo}}
+              </div>
 
                 <br><br>
                 {% if user.is_authenticated %}

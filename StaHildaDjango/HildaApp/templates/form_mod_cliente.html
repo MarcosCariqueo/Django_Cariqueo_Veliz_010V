@@ -55,6 +55,7 @@ $(function()
                         direccion: "required",
                         telefono: "required",
                         edad: "required",
+                        correo: "required",
                   }   
                   
               }, //rules
@@ -74,6 +75,9 @@ $(function()
               edad:{
                   required: 'Ingrese Edad',
               },
+              correo:{
+                  required: 'Ingrese Correo',
+              }
           }//messages
       }); //$('#mi-formulario').validate
   }); //function
@@ -197,6 +201,10 @@ $(function()
                     <label class="textlabel">{{ form.edad.label}}</label>
                     {{ form.edad}}
                 </div>
+                <div class="form-group">
+                  <label class="textlabel">{{ form.correo.label}}</label>
+                  {{ form.correo}}
+              </div>
 
                 <br><br>
                 {% if user.is_authenticated %}

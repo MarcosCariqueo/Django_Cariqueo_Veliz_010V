@@ -11,6 +11,7 @@ class Cliente(models.Model):
     direccion=models.CharField(max_length=20, verbose_name='Dirección')
     telefono=models.CharField(max_length=10, verbose_name='Telefono')
     edad=models.CharField(max_length=20, verbose_name='Edad')
+    correo=models.CharField(max_length=50, verbose_name='Correo')
 
     def __str__(self):
         return self.rut
